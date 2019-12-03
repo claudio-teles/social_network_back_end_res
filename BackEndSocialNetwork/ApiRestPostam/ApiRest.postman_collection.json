@@ -1,0 +1,747 @@
+{
+	"info": {
+		"_postman_id": "409ce1c6-b507-4e2b-93c2-242818a973db",
+		"name": "PrimeFacesSocialNetworkApiRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserActions",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Primeiro Nome 01\",\n\t\"lastName\": \"Segundo Nome 01\",\n\t\"email\": \"email@um.com.br\",\n\t\"userName\": \"Usuário 01\",\n\t\"password\": \"Senha 01\",\n\t\"userIconLocation\": null\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_name\": \"Usuário 02\",\n\t\"password\": \"Senha 02\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateRegister",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id_user\": \"5\",\n\t\"user_name\": \"Usuário 05\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUserById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsersBySearch",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/users/users_search?string=email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"users",
+								"users_search"
+							],
+							"query": [
+								{
+									"key": "string",
+									"value": "email"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "ContactActions",
+			"item": [
+				{
+					"name": "SaveContact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fk_user\": \"1\",\n\t\"contact\": \"4\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetContact",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/contacts/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"contacts",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetContacts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteContact",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/contacts/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"contacts",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MessageActions",
+			"item": [
+				{
+					"name": "SendMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"from_user\": \"5\",\n\t\"to_user\": \"7\",\n\t\"subject\": \"subject 01\",\n\t\"text\": \"text 01\",\n\t\n\t\"emojis\": \"emoji_01, emoji_02, emoji_03\",\n\t\"images\": \"image_01, image_02, image_03\",\n\t\"audios\": \"audio_01, audio_02, audio_03\",\n\t\"videos\": \"video_01, video_02, video_03\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMessage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteMessage",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSenderMessage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages/prop_contact_sender/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages",
+								"prop_contact_sender",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRecipientMessage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages/prop_contact_recipient/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages",
+								"prop_contact_recipient",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSearchMessage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/messages/messages_search?string=sub",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"messages",
+								"messages_search"
+							],
+							"query": [
+								{
+									"key": "string",
+									"value": "sub"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PublicatiosActions",
+			"item": [
+				{
+					"name": "SendPublication",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": \"5\",\n\t\"title\": \"title 01\",\n\t\"text\": \"text 01\",\n\t\n\t\"emojis\": \"emoji_01, emoji_02, emoji_03\",\n\t\"images\": \"image_01, image_02, image_03\",\n\t\"audios\": \"audio_01, audio_02, audio_03\",\n\t\"videos\": \"video_01, video_02, video_03\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/publications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublication",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/publications/27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"publications",
+								"27"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublications",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/publications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePublication",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/publications/32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"publications",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSearchPublication",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8180/BackEndSocialNetwork/jaxrs/publications/publications_search?string=text_01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"BackEndSocialNetwork",
+								"jaxrs",
+								"publications",
+								"publications_search"
+							],
+							"query": [
+								{
+									"key": "string",
+									"value": "text_01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
